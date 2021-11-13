@@ -35,6 +35,7 @@ function App() {
   };
 
   const categoryHandler = category => {
+    console.log(products)
     closeMenu();
     dispatch(filterProductsByCategory(products, category));
   };
@@ -117,7 +118,7 @@ function App() {
             <Route path='/products/:id' exact component={ProductContainer} />
             <Route path='/cart/:id?' component={CartContainer} />
             <Route path='/' exact component={HomeContainer} />
-            
+
           </main>
         </div>
 

@@ -1,8 +1,9 @@
 const BASE_URL = 'https://react-widget-store-api.herokuapp.com/api/v1';
 
 export const fetchProducts = () => dispatch => {
-  fetch(`${BASE_URL}/products`)
+  fetch(`/product.json`)
     .then(res => res.json())
+    .then(res => console.log(res))
     .then(products => dispatch({ type: 'FETCH_PRODUCTS', payload: products }));
 };
 
@@ -40,6 +41,7 @@ export const sortProducts = (products, sort) => dispatch => {
 // Filter Products By Category
 export const filterProductsByCategory = (products, category) => dispatch => {
   let filteredByCategory = products;
+  console.log(products)
   if (category !== 'All') {
     filteredByCategory = products.filter(product => product.category.toUpperCase() === category.toUpperCase());
   }
@@ -53,52 +55,31 @@ export const filterProductsByCategory = (products, category) => dispatch => {
 };
 
 export const detailsProduct = productId => dispatch => {
-  fetch(`${BASE_URL}/products/${productId}`)
+  fetch(`/product.json`)
     .then(res => res.json())
+    .then(res => res.find(prod => prod.id === productId))
     .then(product => dispatch({ type: 'GET_PRODUCT', payload: product }));
 };
 
 export const saveProduct = product => dispatch => {
-  if (product.id) {
-    fetch(`${BASE_URL}/products/${product.id}`, {
-      method: 'PATCH',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ product }),
-    })
-      .then(res => res.json())
-      .then(product => dispatch({ type: 'SAVE_PRODUCT', payload: product, success: true }));
-  } else {
-    fetch(`${BASE_URL}/products`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ product }),
-    })
-      .then(res => res.json())
-      .then(product => dispatch({ type: 'SAVE_PRODUCT', payload: product, success: true }));
-  }
+  fetch(`/product.json`)
+    .then(res => res.json())
+    .then(res => res.push(product))
+    .then(product => dispatch({ type: 'SAVE_PRODUCT', payload: product, success: true }));
+
 };
 
 export const deleteProduct = product => dispatch => {
-  fetch(`${BASE_URL}/products/${product.id}`, {
-    method: 'DELETE',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  }).then(product => dispatch({ type: 'DELETE_PRODUCT', payload: product, success: true }));
+  fetch(`/product.json`)
+    .then(res => res.json())
+    .then(res => res.remove(prod => prod.id === product.id))
+    .then(product => dispatch({ type: 'DELETE_PRODUCT', payload: product, success: true }));
 };
 
 export const saveProductReview = (productId, review) => dispatch => {
-  fetch(`${BASE_URL}/products/${productId}/reviews`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ review }),
-  })
+  fetch(`/product.json`)
     .then(res => res.json())
+    .then(res => res.find(prod => prod.id === productId))
+    .then(res => res.review.push(review))
     .then(review => dispatch({ type: 'SAVE_PRODUCT_REVIEW', payload: review, success: true }));
 };

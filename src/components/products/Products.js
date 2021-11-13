@@ -7,6 +7,7 @@ import Product from './Product';
 const Products = () => {
   const dispatch = useDispatch();
   const { filteredProducts } = useSelector(state => state.products);
+  console.log(filteredProducts)
 
   useEffect(() => {
     dispatch(fetchProducts());
