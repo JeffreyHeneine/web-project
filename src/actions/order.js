@@ -5,166 +5,47 @@ var orderData= [
         "cartItems": [
             {
                 "qty": 2,
-                "name": "Stanley Hammer",
-                "image": "/images/t1.jpg",
-                "price": 12.99,
+                "name": "Black shorts",
+                "image": "/images/Shorts_Men_black.jpeg",
+                "price": 29.99,
                 "countInStock": 10
             }
         ],
         "shipping": {
-            "city": "Sweetville",
-            "address": "999 Sweet Lane",
-            "country": "United States",
+            "city": "beirut",
+            "address": "Furn el cheback",
+            "country": "Lebanon",
             "postalCode": "99999"
         },
         "payment": {
-            "paymentMethod": "PayPal"
+            "paymentMethod": "cash at delivery"
         },
-        "itemsPrice": 25.98,
-        "taxPrice": 3.897,
+        "itemsPrice": 59.98,
+        "taxPrice": 5.0,
         "shippingPrice": 10.0,
-        "totalPrice": 39.877,
+        "totalPrice": 74.98,
         "isPaid": true,
-        "paidAt": "2020-08-27",
+        "paidAt": "2021-11-14",
         "isDelivered": true,
-        "deliveredAt": "2020-08-29",
+        "deliveredAt": "2021-11-14",
         "user": {
-            "id": 1,
-            "first_name": "Tanner",
-            "last_name": "Townsend",
-            "email": "admin@widgets.com",
+            "id": 3,
+            "first_name": "Jeffrey",
+            "last_name": "Heneine",
+            "email": "jeffrey-heneine@hotmail.com",
             "isAdmin": true,
             "shipping": {
-                "city": "Sweetville",
-                "address": "999 Sweet Lane",
-                "country": "United States",
-                "postalCode": "99999"
+                "city": "Mansourieh",
+                "address": "hay el blata",
+                "country": "Lebanon",
+                "postalCode": "456"
             },
             "payment": {
-                "paymentMethod": "PayPal"
+                "paymentMethod": "cash at delivery"
             }
         }
     },
-    {
-        "id": "2",
-        "user_id": "1",
-        "cartItems": [
-            {
-                "qty": 1,
-                "name": "Craftsman Wrench",
-                "image": "/images/t3.jpg",
-                "price": 1.99,
-                "countInStock": 6
-            },
-            {
-                "qty": 1,
-                "name": "Some Old Rusty Nails",
-                "image": "/images/t2.jpg",
-                "price": 3.99,
-                "countInStock": 1
-            },
-            {
-                "qty": 4,
-                "name": "DeWalt 20V Power Drill",
-                "image": "/images/t4.jpg",
-                "price": 99.99,
-                "countInStock": 12
-            }
-        ],
-        "shipping": {
-            "city": "Sweetville",
-            "address": "999 Sweet Lane",
-            "country": "United States",
-            "postalCode": "99999"
-        },
-        "payment": {
-            "paymentMethod": "PayPal"
-        },
-        "itemsPrice": 405.94,
-        "taxPrice": 60.891,
-        "shippingPrice": 0.0,
-        "totalPrice": 466.831,
-        "isPaid": false,
-        "paidAt": null,
-        "isDelivered": false,
-        "deliveredAt": null,
-        "user": {
-            "id": 1,
-            "first_name": "Tanner",
-            "last_name": "Townsend",
-            "email": "admin@widgets.com",
-            "isAdmin": true,
-            "shipping": {
-                "city": "Sweetville",
-                "address": "999 Sweet Lane",
-                "country": "United States",
-                "postalCode": "99999"
-            },
-            "payment": {
-                "paymentMethod": "PayPal"
-            }
-        }
-    },
-    {
-        "id": "3",
-        "user_id": "1",
-        "cartItems": [
-            {
-                "qty": 3,
-                "name": "Stanley Hammer",
-                "image": "/images/t1.jpg",
-                "price": 12.99,
-                "countInStock": 10
-            },
-            {
-                "qty": 1,
-                "name": "Some Old Rusty Nails",
-                "image": "/images/t2.jpg",
-                "price": 3.99,
-                "countInStock": 1
-            },
-            {
-                "qty": 1,
-                "name": "Craftsman Wrench",
-                "image": "/images/t3.jpg",
-                "price": 1.99,
-                "countInStock": 6
-            }
-        ],
-        "shipping": {
-            "city": "Sweetville",
-            "address": "999 Sweet Lane",
-            "country": "United States",
-            "postalCode": "99999"
-        },
-        "payment": {
-            "paymentMethod": "PayPal"
-        },
-        "itemsPrice": 44.95,
-        "taxPrice": 6.742500000000001,
-        "shippingPrice": 10.0,
-        "totalPrice": 61.6925,
-        "isPaid": true,
-        "paidAt": "2020-08-29",
-        "isDelivered": true,
-        "deliveredAt": "2020-09-04",
-        "user": {
-            "id": 1,
-            "first_name": "Tanner",
-            "last_name": "Townsend",
-            "email": "admin@widgets.com",
-            "isAdmin": true,
-            "shipping": {
-                "city": "Sweetville",
-                "address": "999 Sweet Lane",
-                "country": "United States",
-                "postalCode": "99999"
-            },
-            "payment": {
-                "paymentMethod": "PayPal"
-            }
-        }
-    }
+    
 ]
 
 

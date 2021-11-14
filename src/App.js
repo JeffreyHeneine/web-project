@@ -82,28 +82,38 @@ function App() {
             </li>
             <li>
               <button type='button' onClick={e => categoryHandler(e.target.innerText)}>
-                Pants
+                Pants Men
               </button>
             </li>
             <li>
               <button type='button' onClick={e => categoryHandler(e.target.innerText)}>
-                Tshirts
+                Tshirts Men
               </button>
             </li>
             <li>
               <button type='button' onClick={e => categoryHandler(e.target.innerText)}>
-                Shorts
+                Shorts Men
               </button>
             </li>
             <li>
               <button type='button' onClick={e => categoryHandler(e.target.innerText)}>
-                Underwear
+                Underwear Men
               </button>
             </li>
 
             <li>
               <button type='button' onClick={e => categoryHandler(e.target.innerText)}>
-                Women
+                Pants Women
+              </button>
+            </li>
+            <li>
+              <button type='button' onClick={e => categoryHandler(e.target.innerText)}>
+                Dress Women
+              </button>
+            </li>
+            <li>
+              <button type='button' onClick={e => categoryHandler(e.target.innerText)}>
+                Sport Women
               </button>
             </li>
           </ul>

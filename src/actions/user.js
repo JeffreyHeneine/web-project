@@ -2,40 +2,47 @@ let max_id=3
 let useData =[
     {
         "id": 2,
-        "first_name": "Bob",
-        "last_name": "Barker",
-        "email": "bob@widgets.com",
-        "shipping": null,
-        "payment": null,
+        "first_name": "Rawad",
+        "last_name": "Loutfi",
+        "email": "rawad-loutfi@widgets.com",
+        "shipping": {
+            "city": "Furn el cheback",
+            "address": "wara el bigSale",
+            "country": "Lebanon",
+            "postalCode": "123"
+        },
+        "payment": {
+            "paymentMethod": "cash ar delivery"
+        },
         "password_digest": "$2a$12$VWqiPbRQdyUKw7FmB3IOKOcrNnes5YVqv1RBW2L72bmw3fD2zSHO.",
-        "isAdmin": false
+        "isAdmin": true
     },
     {
         "id": 3,
         "first_name": "Jeffrey",
         "last_name": "Heneine",
         "email": "jeffrey-heneine@hotmail.com",
-        "shipping": null,
-        "payment": null,
+        "shipping": {
+            "city": "Mansourieh",
+            "address": "hay el blata",
+            "country": "Lebanon",
+            "postalCode": "456"
+        },
+        "payment": {
+            "paymentMethod": "cash ar delivery"
+        },
         "password_digest": "$2a$12$cafW2y7Ja1pebYpIUlgCE.CO6NPLM2RuRW01LidrxXJ/50FuDQy2i",
-        "isAdmin": false
+        "isAdmin": true
     },
     {
         "id": 1,
-        "first_name": "Tanner",
-        "last_name": "Townsend",
-        "email": "admin@widgets.com",
-        "shipping": {
-            "city": "Sweetville",
-            "address": "999 Sweet Lane",
-            "country": "United States",
-            "postalCode": "99999"
-        },
-        "payment": {
-            "paymentMethod": "PayPal"
-        },
+        "first_name": "Maroun",
+        "last_name": "Helou",
+        "email": "maroun-helou@widgets.com",
+        "shipping": null,
+        "payement":null,
         "password_digest": "$2a$12$9w7Ln4jicUbGR/sBjpSzS.GKQPowKjA3wXRj7Ifie/qJ1opn5wJLS",
-        "isAdmin": true
+        "isAdmin": false
     }
 ]
 
