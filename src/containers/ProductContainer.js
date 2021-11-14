@@ -30,7 +30,7 @@ const ProductContainer = props => {
     e.preventDefault();
     dispatch(
       saveProductReview(props.match.params.id, {
-        name: userInfo.user.first_name + ' ' + userInfo.user.last_name,
+        name: userInfo?.user?.first_name + ' ' + userInfo?.user?.last_name,
         rating: rating,
         comment: comment,
       })

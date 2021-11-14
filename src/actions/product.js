@@ -144,5 +144,5 @@ export function deleteProd(product) {
 
 export function saveReviewProd(productId, review) {
     let index = productData.findIndex(prod => prod.id === productId)
-    productData[index].review.push(review)
+    productData[index].reviews.push(review)
 }
