@@ -47,7 +47,7 @@ function App() {
         <header className='header'>
           <div className='brand'>
             <button onClick={openMenu}>&#9776;</button>
-            <Link to='/'>E-commerce ESIB</Link>
+            <Link to='/'>ESIB-Commerce&#153; </Link>
           </div>
           <div className='header-links'>
             <Link to='/cart'>
@@ -72,7 +72,7 @@ function App() {
         <aside className='sidebar'>
           <h3>Shopping Categories</h3>
           <button className='sidebar-close-button' onClick={closeMenu}>
-            X
+            x
           </button>
           <ul className='categories'>
             <li>
@@ -82,22 +82,28 @@ function App() {
             </li>
             <li>
               <button type='button' onClick={e => categoryHandler(e.target.innerText)}>
-                DeWalt
+                Pants
               </button>
             </li>
             <li>
               <button type='button' onClick={e => categoryHandler(e.target.innerText)}>
-                Craftsman
+                Tshirts
               </button>
             </li>
             <li>
               <button type='button' onClick={e => categoryHandler(e.target.innerText)}>
-                Stanley
+                Shorts
               </button>
             </li>
             <li>
               <button type='button' onClick={e => categoryHandler(e.target.innerText)}>
-                Unknown
+                Underwear
+              </button>
+            </li>
+
+            <li>
+              <button type='button' onClick={e => categoryHandler(e.target.innerText)}>
+                Women
               </button>
             </li>
           </ul>
@@ -123,7 +129,7 @@ function App() {
         </div>
 
         {/* Footer */}
-        <footer className='footer'>Copyright &#169; 2020 Heneine & Loutfi. All rights reserved.</footer>
+        <footer className='footer'>Copyright &#169; 2021 Heneine & Loutfi. All rights reserved.</footer>
       </div>
     </BrowserRouter>
   );

@@ -1,25 +1,33 @@
 let productData = [
     {
         "id": "1",
-        "name": "Stanley Socket Set",
+        "name": " Simple black tshirt",
         "description": "You really won't ever use these!",
-        "category": "Stanley",
-        "image": "/images/t6.jpg",
-        "price": 59.99,
-        "brand": "Stanley",
-        "rating": 0.0,
-        "numReviews": 0,
-        "countInStock": 0,
-        "reviews": []
+        "category": "Tshirts",
+        "image": "/images/Tshirt_Men_black.jpeg",
+        "price": 11.99,
+        "brand": "Top",
+        "rating": 4,
+        "numReviews": 1,
+        "countInStock": 50,
+        "reviews": [
+            {
+                "id": 1,
+                "product_id": "1",
+                "name": "Bob Marley ",
+                "rating": 4,
+                "comment": "Very nice !! "
+            }
+        ]
     },
     {
         "id": "2",
-        "name": "Stanley Hammer",
-        "description": "Great hammer for smashing all of the things!",
-        "category": "Stanley",
-        "image": "/images/t1.jpg",
-        "price": 12.99,
-        "brand": "Stanley",
+        "name": "Grey shorts",
+        "description": "Very casual shorts for everyday use",
+        "category": "Shorts",
+        "image": "/images/Shorts_Men.jpeg",
+        "price": 29.99,
+        "brand": "Bot",
         "rating": 3.5,
         "numReviews": 2,
         "countInStock": 10,
@@ -27,27 +35,27 @@ let productData = [
             {
                 "id": 1,
                 "product_id": "2",
-                "name": "Tanner Townsend",
+                "name": "Tanner",
                 "rating": 5,
-                "comment": "Amazing Hammer!"
+                "comment": "Amazing Shorts!"
             },
             {
                 "id": 2,
                 "product_id": "2",
-                "name": "Bob Barker",
+                "name": "Bob ",
                 "rating": 2,
-                "comment": "Couldn't figure out how to use it!!!!!!!!!!"
+                "comment": "Bad !!!"
             }
         ]
     },
     {
         "id": "3",
-        "name": "Some Old Rusty Nails",
-        "description": "These are the best old rusty nails anyone can find!",
-        "category": "Unknown",
-        "image": "/images/t2.jpg",
+        "name": "Underwear",
+        "description": "Check these underwear , 100% coton",
+        "category": "Underwear",
+        "image": "/images/Underwear_Men.jpeg",
         "price": 3.99,
-        "brand": "Unknown",
+        "brand": "Underwear",
         "rating": 3.0,
         "numReviews": 1,
         "countInStock": 1,
@@ -55,28 +63,28 @@ let productData = [
             {
                 "id": 3,
                 "product_id": "3",
-                "name": "Tanner Townsend",
+                "name": "Tanner ",
                 "rating": 3,
-                "comment": "Nails broke when using them! Good thing they were cheap..."
+                "comment": "Nice !! "
             }
         ]
     },
     {
         "id": "4",
-        "name": "Craftsman Wrench",
-        "description": "How does one even use this thing?",
-        "category": "Craftsman",
-        "image": "/images/t3.jpg",
-        "price": 1.99,
-        "brand": "Craftsman",
-        "rating": 1.0,
+        "name": " Sweatpants",
+        "description": "Very comfortable?",
+        "category": "Pants",
+        "image": "/images/Pants_Men.jpeg",
+        "price": 49.99,
+        "brand": "Bot",
+        "rating": 2.0,
         "numReviews": 1,
         "countInStock": 6,
         "reviews": [
             {
                 "id": 4,
                 "product_id": "4",
-                "name": "Bob Barker",
+                "name": "Bob ",
                 "rating": 1,
                 "comment": "Lame wrench! Doesn't even do the job for you."
             }
@@ -84,46 +92,40 @@ let productData = [
     },
     {
         "id": "5",
-        "name": "DeWalt 20V Power Drill",
-        "description": "The best drill anyone will ever use! Comes with battery included.",
-        "category": "DeWalt",
-        "image": "/images/t4.jpg",
-        "price": 99.99,
-        "brand": "DeWalt",
-        "rating": 4.0,
+        "name": " Simple white tshirt",
+        "description": "You really won't ever use these!",
+        "category": "Tshirts",
+        "image": "/images/Tshirt_Men_white.jpeg",
+        "price": 11.99,
+        "brand": "Top",
+        "rating": 3,
         "numReviews": 1,
-        "countInStock": 12,
+        "countInStock": 50,
         "reviews": [
             {
                 "id": 5,
                 "product_id": "5",
-                "name": "Bob Barker",
-                "rating": 4,
-                "comment": "Woo hoo! Power tools are awesome!"
+                "name": "Jeffrey Heneine",
+                "rating": 3,
+                "comment": "Would really love to buy one !!"
             }
         ]
     },
+
     {
         "id": "6",
-        "name": "Craftsman Drill Bit Set",
-        "description": "Not even sure how to use these. Must buy drill first!",
-        "category": "Craftsman",
-        "image": "/images/t5.jpg",
+        "name": "Black shorts",
+        "description": "Black shorts",
+        "category": "Shorts",
+        "image": "/images/Shorts_Men_black.jpeg",
         "price": 29.99,
-        "brand": "Craftsman",
-        "rating": 5.0,
-        "numReviews": 1,
-        "countInStock": 4,
-        "reviews": [
-            {
-                "id": 6,
-                "product_id": "6",
-                "name": "Bob Barker",
-                "rating": 5,
-                "comment": "I needed this really badly with my new drill!"
-            }
-        ]
-    }
+        "brand": "Bot",
+        "rating": 0,
+        "numReviews": 0,
+        "countInStock": 10,
+        "reviews": []
+    },
+    
 ]
 
 export function getProducts(){

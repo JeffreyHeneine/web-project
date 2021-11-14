@@ -170,7 +170,7 @@ ul.review {
 
 /* Rating Component */
 .rating span {
-  color: #ffb901;
+  color: #ff0101;
   font-size: 1.8rem;
   margin: 0.1rem;
 }
@@ -237,7 +237,7 @@ a > .rating > span:last-child {
 
 .details-image img {
   max-width: 60rem;
-  width: 100%;
+  width: 60%;
 }
 
 .details-info {
@@ -267,7 +267,7 @@ a > .rating > span:last-child {
   border: 0.1rem #808080 solid;
   border-radius: 0.5rem;
   background-color: #f8f8f8;
-  padding: 1rem;
+  padding: 0rem;
 }
 
 .details-action ul li:last-child {
@@ -291,7 +291,7 @@ a > .rating > span:last-child {
 }
 
 .button.primary {
-  background-color: #f0c040;
+  background-color: #151a507d;
 }
 
 .button.secondary {

@@ -18,7 +18,7 @@ const MiniCart = props => {
       <div className='mini-cart'>
         <Fade right cascade>
           {cartItems.length === 0 ? (
-            <div>Cart is empty</div>
+            <div></div>
           ) : (
             <div>
               <div className='cart cart-header'>

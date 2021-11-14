@@ -28,7 +28,7 @@ const Product = props => {
         </button>
       </div>
       <div className='product-rating'>
-        <Rating value={product.rating} text={product.numReviews + ' Reviews'} />
+        <Rating value={product.rating} text={product.numReviews + ' Review(s)'} />
       </div>
     </div>
   );

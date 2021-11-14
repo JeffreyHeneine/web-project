@@ -45,7 +45,7 @@ const SigninContainer = props => {
             </button>
           </li>
           
-          <li>New to E-commerce ESIB?</li>
+          <li>New to ESIB-Commerce ? </li>
           <li>
             <Link
               to={redirect === '/' ? 'register' : 'register?redirect=' + redirect}

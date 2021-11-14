@@ -45,8 +45,10 @@ const ProductContainer = props => {
   return (
     <div>
       <div className='back-to-results'>
-        <Link to='/'>Back to results</Link>
+        <Link to='/'>
+          Back </Link>
       </div>
+
 
       {!product.id ? (
         <div>Loading...</div>
@@ -63,7 +65,7 @@ const ProductContainer = props => {
                 </li>
                 <li>
                   <a href='#reviews'>
-                    <Rating value={product.rating} text={product.numReviews + ' Reviews'} />
+                    <Rating value={product.rating} text={product.numReviews + ' Review(s)'} />
                   </a>
                 </li>
                 <li>
