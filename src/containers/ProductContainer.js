@@ -120,7 +120,7 @@ const ProductContainer = props => {
                   {product.reviews.map(review => (
                     <li key={review.id}>
                       <div>
-                        {review.name} - {review.created_at.substring(0, 10)}
+                        {review.name} 
                       </div>
 
                       <div>

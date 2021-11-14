@@ -8,7 +8,6 @@ const OrdersContainer = props => {
   const dispatch = useDispatch();
   const orderList = useSelector(state => state.orders);
   const { orders } = orderList;
-  orders.sort((a, b) => (a.created_at < b.created_at ? 1 : -1));
 
   useEffect(() => {
     if (orderList.success) {
@@ -55,7 +54,6 @@ const OrdersContainer = props => {
             {orders.map(order => (
               <tr key={order.id}>
                 <td>{order.id}</td>
-                <td>{order.created_at.substring(0, 10)}</td>
                 <td>{formatCurrency(order.totalPrice)}</td>
                 <td>{order.user.first_name}</td>
                 <td>{order.isPaid.toString()}</td>

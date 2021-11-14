@@ -1,16 +1,14 @@
-const BASE_URL = 'https://react-widget-store-api.herokuapp.com/api/v1';
+import { getProducts, getById, addProduct, deleteProd, saveReviewProd } from './product'
+
+
 
 export const fetchProducts = () => dispatch => {
-  fetch(`/product.json`)
-    .then(res => res.json())
-    .then(res => console.log(res))
-    .then(products => dispatch({ type: 'FETCH_PRODUCTS', payload: products }));
-};
-
+  let products = getProducts();
+  dispatch({ type: 'FETCH_PRODUCTS', payload: products });
+}
 // Filter Product By Search
 export const filterProducts = (products, filter) => dispatch => {
   const filteredProducts = products.filter(product => product.name.toUpperCase().indexOf(filter.toUpperCase()) > -1);
-
   dispatch({
     type: 'FILTER_PRODUCTS_BY_SEARCH',
     payload: {
@@ -41,7 +39,6 @@ export const sortProducts = (products, sort) => dispatch => {
 // Filter Products By Category
 export const filterProductsByCategory = (products, category) => dispatch => {
   let filteredByCategory = products;
-  console.log(products)
   if (category !== 'All') {
     filteredByCategory = products.filter(product => product.category.toUpperCase() === category.toUpperCase());
   }
@@ -55,31 +52,22 @@ export const filterProductsByCategory = (products, category) => dispatch => {
 };
 
 export const detailsProduct = productId => dispatch => {
-  fetch(`/product.json`)
-    .then(res => res.json())
-    .then(res => res.find(prod => prod.id === productId))
-    .then(product => dispatch({ type: 'GET_PRODUCT', payload: product }));
+  let product = getById(productId)
+  dispatch({ type: 'GET_PRODUCT', payload: product });
 };
 
 export const saveProduct = product => dispatch => {
-  fetch(`/product.json`)
-    .then(res => res.json())
-    .then(res => res.push(product))
-    .then(product => dispatch({ type: 'SAVE_PRODUCT', payload: product, success: true }));
+  addProduct(product);
+  dispatch({ type: 'SAVE_PRODUCT', payload: product, success: true });
 
 };
 
 export const deleteProduct = product => dispatch => {
-  fetch(`/product.json`)
-    .then(res => res.json())
-    .then(res => res.remove(prod => prod.id === product.id))
-    .then(product => dispatch({ type: 'DELETE_PRODUCT', payload: product, success: true }));
+  deleteProd(product);
+  dispatch({ type: 'DELETE_PRODUCT', payload: product, success: true });
 };
 
 export const saveProductReview = (productId, review) => dispatch => {
-  fetch(`/product.json`)
-    .then(res => res.json())
-    .then(res => res.find(prod => prod.id === productId))
-    .then(res => res.review.push(review))
-    .then(review => dispatch({ type: 'SAVE_PRODUCT_REVIEW', payload: review, success: true }));
+  saveReviewProd(productId, review);
+  dispatch({ type: 'SAVE_PRODUCT_REVIEW', payload: review, success: true });
 };

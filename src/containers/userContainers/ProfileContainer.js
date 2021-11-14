@@ -16,7 +16,6 @@ const ProfileContainer = props => {
   const { success, myOrders } = useSelector(state => state.orders);
   const myNewOrders = myOrders
     .filter(order => order.user.id === userInfo.user.id)
-    .sort((a, b) => (a.created_at < b.created_at ? 1 : -1));
 
   const handleLogout = () => {
     dispatch(logout());
@@ -133,7 +132,6 @@ const ProfileContainer = props => {
               {myNewOrders.map(order => (
                 <tr key={order.id}>
                   <td>{order.id}</td>
-                  <td>{order.created_at.substring(0, 10)}</td>
                   <td>{formatCurrency(order.totalPrice)}</td>
                   <td>{order.isPaid.toString()}</td>
                   <td>
