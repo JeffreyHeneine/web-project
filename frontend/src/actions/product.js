@@ -17,6 +17,19 @@ let productData = [
                 "name": "Bob Marley ",
                 "rating": 4,
                 "comment": "Very nice !! "
+            },
+            {
+                "id": 2,
+                "product_id": "1",
+                "name": "Rawad Loutfi ",
+                "rating": 4,
+                "comment": "woww "
+            },{
+                "id": 1,
+                "product_id": "1",
+                "name": "Bob Marley ",
+                "rating": 4,
+                "comment": "exellent "
             }
         ]
     },
