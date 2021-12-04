@@ -6,4 +6,4 @@ const Product = require('./models/Product');
 
 connectDB();
 
-const importData= async() =>{}
+const importData= async() =>{git push -u}
