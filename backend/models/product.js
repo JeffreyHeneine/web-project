@@ -9,24 +9,24 @@ const productSchema = new mongoose.Schema({
         type :String,
         required :true
     },
-    price:{
-        type :Number,
-        required : true
-    },
-    countInStock:{
-        type :Number,
-        required : true
-    },
-    iamgeUrl:{
-        type :String,
-        required: true
-    },
     category:{
         type :String,
         required : true
     },
-    Brand:{
+    imageUrl:{
         type :String,
+        required: true
+    },
+    price:{
+        type :Number,
+        required : true
+    },
+    brand:{
+        type :String,
+        required : true
+    },
+    countInStock:{
+        type :Number,
         required : true
     }
 })
