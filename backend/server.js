@@ -74,7 +74,7 @@ app.post('/api/login', async (req, res) => {
 })
 
 
-// const PORT = process.env.PORT || 1337;
+// const PORT = process.env.PORT || 3000;
 
-app.listen(1337,() => 
-            console.log('Server running on port: 1337 '));
+app.listen(3000,() => 
+            console.log('Server running on port: 3000 '));
