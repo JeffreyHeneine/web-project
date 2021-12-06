@@ -1,35 +1,55 @@
-import React, { useEffect, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React, { useState } from 'react';
+//import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { register } from '../../actions/userActions';
+import {useHistory} from "react-router-dom"
 
 const RegisterContainer = props => {
-  const dispatch = useDispatch();
+  const history = useHistory()
+
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [passwordConfirmation, setPasswordConformation] = useState('');
-  const { userInfo } = useSelector(state => state.user);
+
+  //const { userInfo } = useSelector(state => state.user);
   const redirect = props.location.search ? props.location.search.split('=')[1] : '/';
 
-  useEffect(() => {
-    // if (userInfo) {
-    //   props.history.push(redirect);
-    // }
-    return () => {
-      //
-    };
-  }, [userInfo, props.history, redirect]);
+  // useEffect(() => {
+  //   // if (userInfo) {
+  //   //   props.history.push(redirect);
+  //   // }
+  //   return () => {
+  //     //
+  //   };
+  // }, [userInfo, props.history, redirect]);
 
-  const submitHandler = event => {
-    event.preventDefault();
-    dispatch(register(firstName, lastName, email, password, passwordConfirmation));
-  };
+  async function handleSubmit(event){
+    event.preventDefault()
+
+    const response = await fetch('http://localhost:1337/api/register' , {
+      method : 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        firstName,
+        lastName,
+        email,
+        password,
+        passwordConfirmation,
+      }),
+    })
+    const data = await response.json()
+
+    if (data.status === 'ok') {
+      history.push('/signin')
+    }
+  }
 
   return (
     <div className='form'>
-      <form onSubmit={submitHandler}>
+      <form onSubmit={handleSubmit}>
         <ul className='form-container'>
           <li>
             <h2>Create An Account</h2>
@@ -38,6 +58,7 @@ const RegisterContainer = props => {
             <label htmlFor='first_name'>First Name</label>
             <input
               type='first_name'
+              value ={firstName}
               required
               name='first_name'
               id='first_name'
@@ -48,6 +69,7 @@ const RegisterContainer = props => {
             <label htmlFor='last_name'>Last Name</label>
             <input
               type='last_name'
+              value ={lastName}
               required
               name='last_name'
               id='last_name'
@@ -56,16 +78,28 @@ const RegisterContainer = props => {
           </li>
           <li>
             <label htmlFor='email'>Email</label>
-            <input type='email' required name='email' id='email' onChange={e => setEmail(e.target.value)} />
+            <input 
+            type='email'
+            value ={email} 
+            required 
+            name='email' 
+            id='email' 
+            onChange={e => setEmail(e.target.value)} />
           </li>
           <li>
             <label htmlFor='password'>Password</label>
-            <input type='password' required id='password' name='password' onChange={e => setPassword(e.target.value)} />
+            <input 
+            type='password' 
+            value ={password}
+            required id='password' 
+            name='password' 
+            onChange={e => setPassword(e.target.value)} />
           </li>
           <li>
             <label htmlFor='password_confirmation'>Password Confirmation</label>
             <input
               type='password'
+              value ={passwordConfirmation}
               required
               id='password_confirmation'
               name='password_confirmation'

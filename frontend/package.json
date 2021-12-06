@@ -27,7 +27,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "client": "npm start --prefix frontend"
-    
   },
   "eslintConfig": {
     "extends": "react-app"
