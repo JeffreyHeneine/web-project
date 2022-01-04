@@ -11,21 +11,23 @@ const ShippingContainer = props => {
   const [country, setCountry] = useState('');
   const { userInfo } = useSelector(state => state.user);
 
-  if (userInfo.user.shipping) {
-    props.history.push('/payment');
-  }
+  // if (userInfo.user.shipping) {
+  //   props.history.push('/payment');
+  // }
 
-  const submitHandler = event => {
-    event.preventDefault();
-    dispatch(saveShipping(userInfo.user.id, address, city, postalCode, country));
-    props.history.push('/payment');
+  // const submitHandler = event => {
+  //   event.preventDefault();
+  //   dispatch(saveShipping(userInfo.user.id, address, city, postalCode, country));
+  //   props.history.push('/payment');
+  // };
+  const shippingHandler = () => {
+    props.history.push('/payment?redirect=shipping');
   };
-
   return (
     <div>
       <CheckoutSteps step1 step2 />
       <div className='form'>
-        <form onSubmit={submitHandler}>
+        {/* <form onSubmit={submitHandler}> */}
           <ul className='form-container'>
             <li>
               <h2>Shipping</h2>
@@ -54,12 +56,12 @@ const ShippingContainer = props => {
             </li>
 
             <li>
-              <button type='submit' className='button primary'>
+              <button onClick={shippingHandler} type='submit' className='button primary'>
                 Continue
               </button>
             </li>
           </ul>
-        </form>
+        {/* </form> */}
       </div>
     </div>
   );

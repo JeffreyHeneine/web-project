@@ -17,6 +17,7 @@ button,
 select,
 textarea {
   font: 1.6rem Montserrat, Helvetica, Arial, sans-serif;
+  color: black;
 }
 
 button {
@@ -44,7 +45,7 @@ button {
 
 .header {
   grid-area: header;
-  background-color: #203040;
+  background-color: #2758518f;
   color: #ffffff;
   display: flex;
   justify-content: space-between;
@@ -290,9 +291,9 @@ a > .rating > span:last-child {
   border: 0.1rem #404040 solid;
 }
 
-.button.primary {
+/* //.button.primary {
   background-color: #151a507d;
-}
+} */
 
 .button.secondary {
   background-color: #f0f0f0;

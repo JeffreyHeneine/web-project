@@ -27,17 +27,17 @@ const ProfileContainer = props => {
     dispatch(update(userInfo.user.id, firstName, lastName, email, password, passwordConfirmation));
   };
 
-  useEffect(() => {
-    if (userInfo) {
-      setEmail(userInfo.user.email);
-      setFirstName(userInfo.user.first_name);
-      setLastName(userInfo.user.last_name);
-    }
-    dispatch(listMyOrders(userInfo.user));
+  // useEffect(() => {
+  //   if (userInfo) {
+  //     setEmail(userInfo.user.email);
+  //     setFirstName(userInfo.user.first_name);
+  //     setLastName(userInfo.user.last_name);
+  //   }
+  //   dispatch(listMyOrders(userInfo.user));
 
-    // }
-    return () => {};
-  }, [dispatch, userInfo]);
+  //   // }
+  //   return () => {};
+  // }, [dispatch, userInfo]);
 
   return (
     <div className='profile'>
