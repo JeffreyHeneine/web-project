@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {  useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-//import { signin } from '../../actions/userActions';
+import { signin } from '../../actions/userActions';
 
 const SigninContainer = props => {
   const dispatch = useDispatch();
@@ -10,7 +10,6 @@ const SigninContainer = props => {
   // const { userInfo } = useSelector(state => state.user);
   // const redirect = props.location.search ? props.location.search.split('=')[1] : '/';
 
-  
   async function loginUser(event){
     event.preventDefault()
     const response = await fetch('http://localhost:1337/api/login' , {

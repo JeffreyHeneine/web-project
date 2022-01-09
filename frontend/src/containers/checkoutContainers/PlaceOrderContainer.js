@@ -5,16 +5,20 @@ import { Link } from 'react-router-dom';
 import CheckoutSteps from '../../components/checkout/CheckoutSteps';
 import { createOrder } from '../../actions/orderActions';
 import formatCurrency from '../../util';
+import ShippingContainer from './ShippingContainer';
+
 
 const PlaceOrderContainer = props => {
   const dispatch = useDispatch();
   const cart = useSelector(state => state.cart);
   const orders = useSelector(state => state.orders);
   const { userInfo } = useSelector(state => state.user);
-  const { shipping, payment } = userInfo.user;
+  const shipping = useSelector(state => state.shipping);
+  const payment = useSelector(state => state.payment);
+  // const address = useSelector(state => state.address);
   const { cartItems } = cart;
   const { success, order } = orders;
-  const user_id = userInfo.user.id;
+  //const user_id = userInfo.user.id;
 
   // Variables for cost of order
   const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
@@ -22,15 +26,17 @@ const PlaceOrderContainer = props => {
   const taxPrice = 0.15 * itemsPrice;
   const totalPrice = itemsPrice + shippingPrice + taxPrice;
 
-  if (!shipping.address) {
-    props.history.push('/shipping');
-  } else if (!payment.paymentMethod) {
-    props.history.push('/payment');
-  }
-
-  // Create An Order
+  // if (!shipping.address) {
+  //   props.history.push('/shipping');
+  // } else if (!payment.paymentMethod) {
+  //   props.history.push('/payment');
+  // }
+  // const placeOrderHandler = () => {
+  //   props.history.push('/placeorder?redirect=shipping');
+  // };
+  //Create An Order
   const placeOrderHandler = () => {
-    dispatch(createOrder({ user_id, cartItems, shipping, payment, itemsPrice, shippingPrice, taxPrice, totalPrice }));
+    dispatch(createOrder({ cartItems, shipping, payment, itemsPrice, shippingPrice, taxPrice, totalPrice }));
   };
 
   useEffect(() => {
@@ -52,12 +58,12 @@ const PlaceOrderContainer = props => {
           <div>
             <h3>Shipping</h3>
             <div>
-              {shipping.address}, {shipping.city}, {shipping.postalCode}, {shipping.country}
+              {/* {shipping.address}, {shipping.city}, {shipping.postalCode}, {shipping.country} */}
             </div>
           </div>
           <div>
             <h3>Payment</h3>
-            <div>Payment Method: {payment.paymentMethod}</div>
+            {/* <div>Payment Method: {payment.paymentMethod}</div> */}
           </div>
           <div>
             <ul className='cart-list-container'>

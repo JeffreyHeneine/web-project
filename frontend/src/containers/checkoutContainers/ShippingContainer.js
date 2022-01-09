@@ -15,11 +15,11 @@ const ShippingContainer = props => {
   //   props.history.push('/payment');
   // }
 
-  // const submitHandler = event => {
-  //   event.preventDefault();
-  //   dispatch(saveShipping(userInfo.user.id, address, city, postalCode, country));
-  //   props.history.push('/payment');
-  // };
+  const submitHandler = event => {
+    event.preventDefault();
+    dispatch(saveShipping( address, city, postalCode, country));
+    props.history.push('/payment');
+  };
   const shippingHandler = () => {
     props.history.push('/payment?redirect=shipping');
   };
@@ -56,7 +56,7 @@ const ShippingContainer = props => {
             </li>
 
             <li>
-              <button onClick={shippingHandler} type='submit' className='button primary'>
+              <button onClick={submitHandler} type='submit' className='button primary'>
                 Continue
               </button>
             </li>

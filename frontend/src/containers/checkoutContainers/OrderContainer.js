@@ -26,9 +26,9 @@ const OrderContainer = props => {
     dispatch(payOrder(order));
   };
 
-  return !order.id ? (
+  return (
     <div>Loading...</div>
-  ) : (
+  )  (
     <div>
       <div className='placeorder'>
         <div className='placeorder-info'>

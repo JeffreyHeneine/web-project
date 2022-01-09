@@ -13,11 +13,11 @@ const PaymentContainer = props => {
   //   props.history.push('/placeorder');
   // }
 
-  // const submitHandler = event => {
-  //   event.preventDefault();
-  //   dispatch(savePayment(userInfo.user.id, paymentMethod));
-  //   props.history.push('/placeorder');
-  // };
+  const submitHandler = event => {
+    event.preventDefault();
+    dispatch(savePayment(userInfo.user.id, paymentMethod));
+    props.history.push('/placeorder');
+  };
   const placeorderHandler = () => {
     props.history.push('/placeorder?redirect=shipping');
   };

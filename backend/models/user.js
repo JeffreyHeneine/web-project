@@ -8,7 +8,7 @@ const User = new mongoose.Schema(
         password: {type:String, requires: true},
         passwordConfirmation: {type:String, requires: true},
     }, 
-    {collection: 'user-data'}
+    {collection: 'users'}
 )
 
 const model = mongoose.model('UserData', User)
