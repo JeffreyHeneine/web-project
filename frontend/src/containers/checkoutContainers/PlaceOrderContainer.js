@@ -106,13 +106,14 @@ const PlaceOrderContainer = props => {
         <div className='placeorder-action'>
           <ul>
             <li>
+            <Link to='/'>
               <button className='button primary full-width'  onClick={message} Link to ="\" >
                 Place Order    
               </button>
-            
+              </Link>
             </li>
             <li>
-                    <Link to='/'></Link>
+                   
             </li>
             <li>
               <h3>Order Summary</h3>

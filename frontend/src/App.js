@@ -48,13 +48,18 @@ function App() {
         <header className='header'>
           <div className='brand'>
             <button onClick={openMenu}>&#9776;</button>
-            <Link to='/'>ESIB-Commerce; </Link>
+            <Link to='/'>ESIB-Commerce </Link>
           </div>
           <div className='header-links'>
             <Link to='/cart'>
               Cart {cartItems.length > 0 ? `(Items: ${cartItems.reduce((a, c) => a + c.qty, 0)})` : 'is empty'}
             </Link>
-            {user ? <Link to='/profile'>{user.first_name}</Link> : <Link to='/signin'>Sign in</Link>}
+            {localStorage.getItem("user-info")?
+            /* {user ? <Link to='/profile'>{user.first_name}</Link> : */
+            <Link to='/signin'>Sign out</Link>
+           : <Link to='/signin'>
+             Sign in
+           </Link> }
             {user && user.isAdmin && (
               <div className='dropdown'>
                 <Link to='/orders'>Admin</Link>
