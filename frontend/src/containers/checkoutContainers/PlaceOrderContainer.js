@@ -38,6 +38,10 @@ const PlaceOrderContainer = props => {
   const placeOrderHandler = () => {
     dispatch(createOrder({ cartItems, shipping, payment, itemsPrice, shippingPrice, taxPrice, totalPrice }));
   };
+  const message = () => {
+    alert("Done");
+    
+  }
 
   useEffect(() => {
     if (success) {
@@ -102,9 +106,13 @@ const PlaceOrderContainer = props => {
         <div className='placeorder-action'>
           <ul>
             <li>
-              <button className='button primary full-width' onClick={placeOrderHandler}>
-                Place Order
+              <button className='button primary full-width'  onClick={message} Link to ="\" >
+                Place Order    
               </button>
+            
+            </li>
+            <li>
+                    <Link to='/'></Link>
             </li>
             <li>
               <h3>Order Summary</h3>
