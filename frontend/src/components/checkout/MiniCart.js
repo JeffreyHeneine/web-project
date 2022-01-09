@@ -52,7 +52,7 @@ const MiniCart = props => {
           <div className='mini-cart'>
             <div className='mini-cart-total'>
               <span>Subtotal: {formatCurrency(cartItems.reduce((a, c) => a + c.price * c.qty, 0))}</span>
-              <Link to={'/payment'}>
+              <Link to={'/shipping'}>
                 <button className='button primary full-width'>Checkout</button>
               </Link>
             </div>

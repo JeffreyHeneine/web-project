@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { saveShipping } from '../../actions/userActions';
 import CheckoutSteps from '../../components/checkout/CheckoutSteps';
+import { Link } from 'react-router-dom';
 
 const ShippingContainer = props => {
   const dispatch = useDispatch();
@@ -55,11 +56,11 @@ const ShippingContainer = props => {
               <input type='text' required name='country' id='country' onChange={e => setCountry(e.target.value)} />
             </li>
 
-            <li>
+            <Link to ={'/payment'}>
               <button onClick={submitHandler} type='submit' className='button primary'>
                 Continue
               </button>
-            </li>
+            </Link>
           </ul>
         {/* </form> */}
       </div>
