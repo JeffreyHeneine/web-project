@@ -57,13 +57,19 @@ const PlaceOrderContainer = props => {
         <div className='placeorder-info'>
           <div>
             <h3>Shipping</h3>
-            <div>
-              {/* {shipping.address}, {shipping.city}, {shipping.postalCode}, {shipping.country} */}
-            </div>
+            <p>
+              BEIRUT
+              BEIRUT
+              1228
+              Lebanon
+            </p>
+              
           </div>
           <div>
             <h3>Payment</h3>
-            {/* <div>Payment Method: {payment.paymentMethod}</div> */}
+            <p>
+              Cash on delivery
+            </p>
           </div>
           <div>
             <ul className='cart-list-container'>

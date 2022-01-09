@@ -27,8 +27,9 @@ const SigninContainer = props => {
       localStorage.setItem('token', data.user)
       alert('Login successfull')
       window.location.href = '/'
+      
     } else{
-      alert('Please check username and password')
+      alert('Please check username and/or password')
     }
     console.log(data)
   }
@@ -46,6 +47,7 @@ const SigninContainer = props => {
         <ul className='form-container'>
           <li>
             <h2>Sign-In</h2>
+        
           </li>
           <li>
             <label htmlFor='email'>Email</label>
