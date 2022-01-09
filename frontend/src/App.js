@@ -18,7 +18,7 @@ import ProfileContainer from './containers/userContainers/ProfileContainer';
 
 // Admin Containers
 import ProductsContainer from './containers/adminContainers/ProductsContainer';
-import OrdersContainer from './containers/adminContainers/OrdersContainer';
+ import OrdersContainer from './containers/adminContainers/OrdersContainer';
 
 function App() {
   const dispatch = useDispatch();
@@ -119,7 +119,7 @@ function App() {
           </ul>
         </aside>
 
-        {/* Main Content Section */}
+        
         <div className='content'>
           <main className='main'>
             <Route path='/register' component={RegisterContainer} />
@@ -129,10 +129,10 @@ function App() {
             <Route path='/shipping' component={ShippingContainer} />
             <Route path='/payment' component={PaymentContainer} />
             <Route path='/placeorder' component={PlaceOrderContainer} />
-            <Route path='/orders' exact component={OrdersContainer} />
-            <Route path='/orders/:id' component={OrderContainer} />
+            {/* <Route path='/orders' exact component={OrdersContainer} /> */}
+           <Route path='/orders' component={OrderContainer} />
             <Route path='/products/:id' exact component={ProductContainer} />
-            <Route path='/cart/:id?' component={CartContainer} />
+           <Route path='/cart/:id?' component={CartContainer}/>
             <Route path='/' exact component={HomeContainer} />
 
           </main>

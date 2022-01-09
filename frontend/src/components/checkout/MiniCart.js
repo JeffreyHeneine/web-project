@@ -34,7 +34,7 @@ const MiniCart = props => {
                     <div>
                       <div>{item.name}</div>
                       <div className='right'>
-                        {formatCurrency(item.price)} x {item.qty}{' '}
+                        {formatCurrency(item.price)} x {item.qty}{' '} 
                         <button className='button' onClick={() => removeFromCartHandler(item)}>
                           Remove
                         </button>
@@ -51,7 +51,7 @@ const MiniCart = props => {
         <div>
           <div className='mini-cart'>
             <div className='mini-cart-total'>
-              <span>Subtotal: {formatCurrency(cartItems.reduce((a, c) => a + c.price * c.qty, 0))}</span>
+               <span>Subtotal: {formatCurrency(cartItems.reduce((a, c) => a + c.price * c.qty, 0))}</span> 
               <Link to={'/shipping'}>
                 <button className='button primary full-width'>Checkout</button>
               </Link>

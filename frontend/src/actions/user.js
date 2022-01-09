@@ -12,7 +12,7 @@ let useData =[
             "postalCode": "123"
         },
         "payment": {
-            "paymentMethod": "cash ar delivery"
+            "paymentMethod": "cash on delivery"
         },
         "password_digest": "$2a$12$VWqiPbRQdyUKw7FmB3IOKOcrNnes5YVqv1RBW2L72bmw3fD2zSHO.",
         "isAdmin": true
@@ -29,7 +29,7 @@ let useData =[
             "postalCode": "456"
         },
         "payment": {
-            "paymentMethod": "cash ar delivery"
+            "paymentMethod": "cash on delivery"
         },
         "password_digest": "$2a$12$cafW2y7Ja1pebYpIUlgCE.CO6NPLM2RuRW01LidrxXJ/50FuDQy2i",
         "isAdmin": true
@@ -40,7 +40,7 @@ let useData =[
         "last_name": "Helou",
         "email": "maroun-helou@widgets.com",
         "shipping": null,
-        "payement":null,
+        "payment":null,
         "password_digest": "$2a$12$9w7Ln4jicUbGR/sBjpSzS.GKQPowKjA3wXRj7Ifie/qJ1opn5wJLS",
         "isAdmin": false
     }

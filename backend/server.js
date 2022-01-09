@@ -43,6 +43,22 @@ app.post('/api/register', async (req,res) => {
     }
     
 })
+app.post('/api/shipping', async (req,res) => {
+    // console.log(req.body)
+        await User.create({
+            address: req.body.address,
+            city: req.body.city,
+            postalCode: req.body.postalCode,
+            country: req.body.country,
+
+        })
+    }
+    
+)
+
+
+
+
 
 app.post('/api/login', async (req, res) => {
 	const user = await User.findOne({

@@ -43,7 +43,7 @@ const RegisterContainer = props => {
     const data = await response.json()
 
     if (data.status === 'ok') {
-      history.push('/signin')
+      history.push('/')
     }
   }
 
@@ -117,7 +117,7 @@ const RegisterContainer = props => {
               to={redirect === '/' ? 'signin' : 'signin?redirect=' + redirect}
               className='button secondary text-center'>
               Sign In
-            </Link>
+            </Link> 
           </li>
         </ul>
       </form>

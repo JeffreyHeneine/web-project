@@ -1,7 +1,7 @@
 const BASE_URL = 'https://react-widget-store-api.herokuapp.com/api/v1';
 
 export const signin = (email, password) => dispatch => {
-  fetch(`${BASE_URL}/login`, {
+  fetch(`${BASE_URL}/users`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -49,9 +49,9 @@ export const update = (userId, first_name, last_name, email, password, password_
     .then(user => dispatch({ type: 'UPDATE_USER', payload: { user } }));
 };
 
-export const saveShipping = (userId, address, city, postalCode, country) => dispatch => {
-  fetch(`${BASE_URL}/users/${userId}`, {
-    method: 'PATCH',
+export const saveShipping = ( address, city, postalCode, country) => dispatch => {
+  fetch(`${BASE_URL}/shipping-details`, {
+    method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
@@ -64,8 +64,7 @@ export const saveShipping = (userId, address, city, postalCode, country) => disp
       },
     }),
   })
-    .then(res => res.json())
-    .then(user => dispatch({ type: 'UPDATE_USER', payload: { user } }));
+    
 };
 
 export const savePayment = (userId, paymentMethod) => dispatch => {
