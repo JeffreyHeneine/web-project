@@ -73,7 +73,7 @@ const SigninContainer = props => {
             </button>
           </li>
           
-          <li>New to ESIB-Commerce ? </li>
+          <li>New to P&O-Commerce ? </li>
           <li>
             <Link
               to='/register'

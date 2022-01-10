@@ -44,7 +44,7 @@ const ShippingContainer = props => {
         country,
       }),
     })
-    //onst data = await response.json()
+    //const data = await response.json()
     saveShipping( address, city, postalCode, country);
     
       history.push('/payment')
